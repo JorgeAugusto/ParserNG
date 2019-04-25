@@ -80,7 +80,7 @@ This ensures that the expression is parsed once(expensive operation) and then ev
 
 
 <b>Inbuilt Functions</b><br>
-The parser has its own set of inbuilt functions. They are:
+The parser has its own set of built-in functions. They are:
 <code>
 sin,cos,tan,sinh,cosh,tanh,sin-¹,cos-¹,tan-¹,sinh-¹,cosh-¹,tanh-¹,sec,csc,cot,sech,csch,coth,sec-¹,csc-¹,cot-¹,sech-¹,csch-¹,coth-¹,exp,ln,lg,log,ln-¹,lg-¹,log-¹,asin,acos,atan,asinh,acosh,atanh,asec,acsc,acot,asech,acsch,acoth,aln,alg,alog,floor,ceil,sqrt,cbrt,inverse,square,cube,pow,fact,comb,perm,sum,prod,avg,med,mode,rng,mrng,rms,cov,min,max,s_d,variance,st_err,rnd,sort,plot,diff,intg,quad,t_root,root,linear_sys,det,invert,tri_mat,echelon,matrix_mul,matrix_div,matrix_add,matrix_sub,matrix_pow,transpose,matrix_edit,
 </code>
@@ -128,6 +128,10 @@ ParserNG uses its very own implementation of a symbolic differentiator.
   </code>
 
 </p>
+
+...I will talk about the other functionality of the library, such as numerical integration later on!
+
+Thanks.
 
 
 
