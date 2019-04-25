@@ -129,7 +129,7 @@ ParserNG uses its very own implementation of a symbolic differentiator.
 
 </p>
 
-...I will talk about the other functionality of the library, such as numerical integration later on!
+...I will talk about other functionalities of the library, such as numerical integration later on!
 
 Thanks.
 
