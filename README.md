@@ -141,20 +141,22 @@ System.out.println("result: " + expr.solve());
 ``` 
 This gives: 43.16981132075472 
 
-Or using variables and calculating simple expressions: 
+### Or using variables and calculating simple expressions: 
 
 ```java 
 MathExpression expr = new MathExpression("r=3;P=2*pi*r;"); 
 
 System.out.println("result: " + expr.getValue("P")); 
 ```
-Or using functions: 
+### Or using functions: 
 
 ```java
 MathExpression expr = new MathExpression("f(x)=39*sin(x^2)+x^3*cos(x);f(3)"); 
 System.out.println("result: " + expr.solve()); 
 ```
 This gives: -10.65717648378352 
+
+### Derivatives (Differential Calculus)
 
 To evaluate the derivative at a given point(Note it does symbolic differentiation(not numerical) behind the scenes, so the accuracy is not limited by the errors of numerical approximations): 
 ```java
@@ -166,7 +168,7 @@ This gives: 38.66253179403897
 The above differentiates x^3 * ln(x) once at x=3. 
 The number of times you can differentiate is 1 for now. 
 
-For Numerical Integration: 
+### For Numerical Integration: 
 
 ```java 
 
