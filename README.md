@@ -129,10 +129,54 @@ ParserNG uses its very own implementation of a symbolic differentiator.
 
 </p>
 
-...I will talk about other functionalities of the library, such as numerical integration later on!
+## More Examples
 
-Thanks.
+Evaluating an expression is as simple as: 
 
+```java 
+
+MathExpression expr = new MathExpression("(34+32)-44/(8+9(3+2))-22"); 
+
+System.out.println("result: " + expr.solve()); 
+``` 
+This gives: 43.16981132075472 
+
+Or using variables and calculating simple expressions: 
+
+```java 
+MathExpression expr = new MathExpression("r=3;P=2*pi*r;"); 
+
+System.out.println("result: " + expr.getValue("P")); 
+```
+Or using functions: 
+
+```java
+MathExpression expr = new MathExpression("f(x)=39*sin(x^2)+x^3*cos(x);f(3)"); 
+System.out.println("result: " + expr.solve()); 
+```
+This gives: -10.65717648378352 
+
+To evaluate the derivative at a given point(Note it does symbolic differentiation(not numerical) behind the scenes, so the accuracy is not limited by the errors of numerical approximations): 
+```java
+MathExpression expr = new MathExpression("f(x)=x^3*ln(x); diff(f,3,1)"); 
+System.out.println("result: " + expr.solve()); 
+```
+This gives: 38.66253179403897 
+
+The above differentiates x^3 * ln(x) once at x=3. 
+The number of times you can differentiate is 1 for now. 
+
+For Numerical Integration: 
+
+```java 
+
+MathExpression expr = new MathExpression("f(x)=2*x; intg(f,1,3)"); 
+System.out.println("result: " + expr.solve()); 
+```
+This gives: 7.999999999998261... approx: 8 ...
+
+
+I will talk about other functionalities of the library, such as numerical integration later on! Thanks.
 
 
 
