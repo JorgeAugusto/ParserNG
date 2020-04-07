@@ -92,7 +92,7 @@ For example the inverse <code>sin</code> function is available both as <code>sin
 
 <b>User defined functions</b><br>
 You can also define your own functions and use them in your math expressions.
-This is done in 2 ways:
+This is done in one of 2 ways:
 <ol>
   <li>f(x,a,b,c,...)= expr_in_said_variables<br> For example: f(x,y)=3*x^2+4*x*y+8</li>
   <li>f = @(x,a,b,c,...)expr_in_said_variables<br> For example: f= @(x,y)3*x^2+4*x*y+8</li>  
