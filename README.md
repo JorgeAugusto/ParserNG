@@ -7,6 +7,8 @@ at the Department of Computer Science and Engineering, Obafemi Awolowo Universit
 My goal was to create a simple, yet powerful, not too bogus math tool that scientists and developers can deploy with their
 work to solve problems of all ranges--from simple to complex.
 
+ParserNG is written completely in (pure) Java and so is as cross-platform as Java can be. I have used it to design math platforms for desktop Java, Java MicroEdition devices(as far back as 2010-2011) , Android,  and by porting the whole platform using J2OBJC from Gooogle; Swift also. The performance has been exceptionally acceptable in all cases.
+
 
 <p><b>FEATURES</b></p>
 <ol>
