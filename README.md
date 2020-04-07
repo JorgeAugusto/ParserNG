@@ -112,7 +112,7 @@ Then do: f(2)....the parser automatically calculates sin(2)+cos(2-1) behind the 
 <p>
 ParserNG uses its very own implementation of a symbolic differentiator.
   
-  It performs symbolic differentiation of expressions behind the scenes and the computes the differential coefficient
+  It performs symbolic differentiation of expressions behind the scenes and then computes the differential coefficient
   of the function at some supplied x-value.
   
   <b>To differentiate a function, do:</b>
