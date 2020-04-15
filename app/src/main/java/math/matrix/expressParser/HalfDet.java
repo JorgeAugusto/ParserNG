@@ -17,7 +17,7 @@ private HalfDet complement;
     public HalfDet(int index,ArrayList<String>scan){
         super("|");
               if(this.getName().equals("")){
-            throw new IndexOutOfBoundsException("Invalid Name For Half-Determinant Operator."  );
+            throw new IndexOutOfBoundsException("Invalid Name For Half-Determinant MOperator."  );
         }//end if
 
         else{

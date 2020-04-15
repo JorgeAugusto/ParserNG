@@ -1123,7 +1123,7 @@ public class MathExpression {
      * @param scan the data it is to process
      */
     public void setVariableValuesInFunction(ArrayList<String> scan) {
-        System.err.println("sc: "+scan);
+
         int sz = scan.size();
         for (int i = 0; i < sz; i++) {
             String varName = scan.get(i);
@@ -2166,7 +2166,9 @@ public class MathExpression {
         return scanner;
     }//end method solveSubPortions()
 
-    public static void main(String args[]) {
+
+    private static void junkExamples(){
+
         /*
          MathExpression f = new MathExpression("x=17;3*x+1/x");//runs in about 2.3 milliSecs
 
@@ -2234,10 +2236,56 @@ public class MathExpression {
         System.out.println("scanner: " + expr.scanner);
         System.out.println("solution: " + expr.solve());
 
+        expr.setExpression("44+22*(3)");
+        System.out.println("solution--: " + expr.solve());
+
 
         System.out.println("return type: " + expr.returnType);
         System.out.println("FunctionManager: " + FunctionManager.FUNCTIONS);
         System.out.println("VariableManager: " + VariableManager.VARIABLES);
+
+
+
+        MathExpression expression = new MathExpression("x=0;sin(ln(x))");
+
+        for(int i=0;i<100000;i++){
+            expression.setValue("x" , i+"");
+            System.out.println( expression.solve() );
+        }
+
+        System.out.println(">>> Finished.");
+
+        Function f = FunctionManager.lookUp("N");
+
+        double start = System.nanoTime();
+
+
+        double iterations = 1000000;
+
+        for(int i=0;i<iterations;i++){
+            f.calc(i+3);
+        }
+
+        double elapsedNanos = (System.nanoTime() - start)/iterations;
+
+
+        System.out.println("DONE: "+ (elapsedNanos/1.0E6)+" ms");
+
+        MathExpression ex = new MathExpression("det(1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5)");
+        System.out.println(ex.solve());
+
+/**
+ * On my Macbook Pro, 16GB RAM; 2.6 GHz Intel Core i7
+ *
+ * The code runs the solve() method at 3.8 microseconds.
+ */
+
+
+    }
+
+    public static void main(String args[]) {
+
+junkExamples();
 
 
     }//end method

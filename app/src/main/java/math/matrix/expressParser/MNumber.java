@@ -15,37 +15,37 @@ import static expressParser.methods.Method.*;
  *
  * @author GBENRO
  */
-public class Number {
+public class MNumber {
     /**
-     * The string of digits that represent this Number object.
+     * The string of digits that represent this MNumber object.
      */
    private String num;
    /**
-    * The location of the Number in the scanner
-    * output of the parent Function object that contains this Number object.
+    * The location of the MNumber in the scanner
+    * output of the parent Function object that contains this MNumber object.
     */
    private int index;
    
    /**
-    * @param num The string of digits that represent this Number object.
+    * @param num The string of digits that represent this MNumber object.
     * 
     */
-   public Number(String num){
+   public MNumber(String num){
        this.num=num;
    }
 
  /**
      *
-     * @param num The string of digits that represent this Number object.
-     * @param index the location of this Operator object in its parent Function
+     * @param num The string of digits that represent this MNumber object.
+     * @param index the location of this MOperator object in its parent Function
      * object's scanned ArrayList object.
      * @param function the parent Function of this object
      */   
-    public Number(String num,int index,ArrayList<String>scan) {
+    public MNumber(String num, int index, ArrayList<String>scan) {
         this.num= isNumber(num)?num:"";
         this.index=index;
         if(this.num.equals("")){
-            throw new IndexOutOfBoundsException("Invalid Name For Log or antilog to any base type Operator."  );
+            throw new IndexOutOfBoundsException("Invalid Name For Log or antilog to any base type MOperator."  );
         }//end if
       else{
             this.index=(index>=0&&scan.get(index).equals(num))?index:-1;
@@ -56,28 +56,28 @@ public class Number {
     }//end constructor
 /**
  *
- * @param index sets the location of this Operator object in its parent Function
+ * @param index sets the location of this MOperator object in its parent Function
  */
     public void setIndex(int index) {
         this.index = index;
     }
 /**
  *
- * @return  the location of this Operator object in its parent Function
+ * @return  the location of this MOperator object in its parent Function
  */
     public int getIndex() {
         return index;
     }
 /**
  *
- * @param num sets the string of digits that represent this Number object.
+ * @param num sets the string of digits that represent this MNumber object.
  */
     public void setNum(String num) {
         this.num = num;
     }
 /**
  *
- * @return the string of digits that represent this Number object.
+ * @return the string of digits that represent this MNumber object.
  */
     public String getNum() {
         return num;
@@ -90,7 +90,7 @@ public class Number {
 
     /**
      * Built for use in my parser only.Serves to detect already and properly scanned numbers in the list where
-     *  string models of other objects reside, e.g Variable objects,Operator objects e.t.c
+     *  string models of other objects reside, e.g Variable objects,MOperator objects e.t.c
      * It is a short cut method that allows for lightning number detection in an environment that contains
      * numbers and other objects like variables, operators e.t.c as it does away with matching patterns and tests
      * just a maximum of 2 numbers to know if the object is a number or not.
@@ -135,7 +135,7 @@ public static boolean validNumber(String num){
 
     /**
      * Built for use in my parser only.Serves to detect already and properly scanned numbers in the list where
-     *  string models of other objects reside, e.g Variable objects,Operator objects e.t.c
+     *  string models of other objects reside, e.g Variable objects,MOperator objects e.t.c
      *@param num the string to be checked if it is a number or not
      * @return true if the item is a number
      */
@@ -159,7 +159,7 @@ else if(firstElement(num).equals(".")){
 }
 /**
  *
- * @return true if this Number object is a
+ * @return true if this MNumber object is a
  * negative one.
  */
 public boolean isNegative(){
@@ -167,8 +167,8 @@ public boolean isNegative(){
 }
 
 
-public Number getNumber(){
-    return new Number(num);
+public MNumber getNumber(){
+    return new MNumber(num);
 }
 
 public void validateNumber(MatrixFunction function){
@@ -211,6 +211,6 @@ ArrayList<String>scan= function.getScanner();
 
 
 public static void main(String args[]){
-    Number dNum=new Number("5u");
+    MNumber dNum=new MNumber("5u");
 }
 }

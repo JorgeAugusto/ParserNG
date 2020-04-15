@@ -5,19 +5,17 @@
 
 package math.matrix.expressParser;
 
-import expressParser.*;
-
 /**
  *
  * @author GBENRO
  */
-public class Logic {
+public class MLogic {
 
 static boolean on = true;
 boolean off = false;
 
 
-public static boolean and(Number num1, Number num2){
+public static boolean and(MNumber num1, MNumber num2){
 
     return on;
 }

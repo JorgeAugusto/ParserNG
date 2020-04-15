@@ -193,6 +193,7 @@ public class Function {
         return type;
     }
 
+
     /**
      *
      * @param x A list of variable values to set for the function. The supplied
@@ -202,11 +203,14 @@ public class Function {
      */
     public double calc(double... x) {
         int i = 0;
-        for (Variable var : independentVariables) {
-            mathExpression.setValue(var.getName(), String.valueOf(x[i++]));
-        }
+        if( x.length == independentVariables.size()){
+            for (Variable var : independentVariables) {
+                mathExpression.setValue(var.getName(), String.valueOf(x[i++]));
+            }
 
-        return Double.parseDouble(mathExpression.solve());
+            return Double.parseDouble(mathExpression.solve());
+        }
+        return Double.NaN;
     }
 
 
@@ -706,7 +710,8 @@ public class Function {
                 x2 = p;
             }
             int i = 0;
-            for (double x = x1; x <= x2; x += xStep, i++) {
+            int len = sz+1;
+            for (double x = x1; i<len && x <= x2; x += xStep, i++) {
                 String xStr = String.valueOf(x);
                 mathExpression.setValue(variableName, xStr);
                 results[0][i] = mathExpression.solve();
@@ -744,8 +749,9 @@ public class Function {
         int sz = (int) ((xUpper - xLower) / xStep);
 
         double[][] results = new double[2][sz + 1];
+        int len = sz+1;
         int i = 0;
-        for (double x = xLower; x <= xUpper; x += xStep, i++) {
+        for (double x = xLower; i < len && x <= xUpper; x += xStep, i++) {
             mathExpression.setValue(variableName, String.valueOf(x));
             mathExpression.setDRG(DRG);
             results[0][i] = Double.parseDouble(mathExpression.solve());
@@ -1053,7 +1059,8 @@ public class Function {
     }
 
     public static void main(String args[]) {
-        Function f = new Function("@(3,3)(4,1,2,5,6,8,2,3,9)");
+
+    /*    Function f = new Function("@(3,3)(4,1,2,5,6,8,2,3,9)");
 
         System.out.println(f.getMatrix());
 
@@ -1067,6 +1074,16 @@ public class Function {
 
 
         System.out.println(FunctionManager.FUNCTIONS);
+        */
+
+
+
+        Function func = new Function("p=@(x)sin(x)+x+x^2");
+        FunctionManager.add(func);
+        System.out.println(func.calc(4));
+
+
+
 
     }//end method
 

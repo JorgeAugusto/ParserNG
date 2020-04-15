@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author GBENRO
  */
-public class Operator{
+public class MOperator {
 /**
  * The name of the operator object
  */
@@ -22,21 +22,21 @@ private String name;
 
 /**
  *
- * @param name creates a new form of a valid mathronian Operator
+ * @param name creates a new form of a valid mathronian MOperator
  */
-public Operator(String name){
+public MOperator(String name){
     this.name=name;
 }
 /**
  *
- * @param name set the name of the Operator object
+ * @param name set the name of the MOperator object
  */
 public void setName(String name){
     this.name=name;
 }
 /**
  *
- * @return the name of the Operator object
+ * @return the name of the MOperator object
  */
 public String getName(){
     return name;
@@ -240,8 +240,8 @@ public static boolean isUnaryPostOperator(String op){
 
 /**
  * The precedence of the operators
- * @param name the name of the Operator object
- * @return the Operator's Precedence attribute
+ * @param name the name of the MOperator object
+ * @return the MOperator's Precedence attribute
  */
 public static Precedence getPrecedence(String name){
 
@@ -311,7 +311,7 @@ boolean correct=true;
     for(int i=0;i<scan.size();i++){
 
 if(isUnaryPostOperator(scan.get(i))){
-correct = new UnaryPostOperator(scan.get(i), i, scan).validate(scan);
+correct = new MUnaryPostOperator(scan.get(i), i, scan).validate(scan);
 }
  else if(isUnaryPreOperator(scan.get(i))){
 correct = new UnaryPreOperator(scan.get(i), i, scan).validate(scan);

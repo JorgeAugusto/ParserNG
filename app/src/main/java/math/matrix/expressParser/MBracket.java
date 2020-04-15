@@ -5,7 +5,6 @@
 
 package math.matrix.expressParser;
 
-import expressParser.*;
 import java.util.ArrayList;
 
 
@@ -15,7 +14,7 @@ import java.util.ArrayList;
  * @author GBENRO
  */
 
-public class Bracket extends Operator{
+public class MBracket extends MOperator {
 /**
  * the name of the bracket i.e "(" or ")"
  */
@@ -30,7 +29,7 @@ private int index;
  * objects of this class keep a record of their counterpart or complementing bracket.
  *
  */
-private Bracket complement;
+private MBracket complement;
 /**
  * Return true if the contents of the bracket have been evaluated
  */
@@ -42,7 +41,7 @@ private boolean evaluated=false;
  * and initial
  * @param op
  */
-    public Bracket(String op) {
+    public MBracket(String op) {
         super(op);
 
     }
@@ -74,11 +73,11 @@ private boolean evaluated=false;
  * same class,but having similar attributes.
  *
  * How can this method be of any use?
- * Imagine an Array of Brackets say array bracs filled with Bracket objects.
+ * Imagine an Array of Brackets say array bracs filled with MBracket objects.
  *
- * If we create another Bracket array, say array moreBracs and copy
+ * If we create another MBracket array, say array moreBracs and copy
  * the objects in bracs into moreBracs.Now, both bracs and moreBracs will
- * hold references to these Bracket objects in memory.Java will not create new,
+ * hold references to these MBracket objects in memory.Java will not create new,
  * similar objects at another address in memory and store in the new array.
  * The command was most likely moreBracs=bracs;
  * or in a loop, it would look like:
@@ -105,24 +104,24 @@ private boolean evaluated=false;
  * Note that this can be applied to all storage objects too e.g Collection objects and so on.
  *
  * @param brac The object whose twin we wish to create.
- * @return a Bracket object that manifests exactly
+ * @return a MBracket object that manifests exactly
  * the same attributes as brac but is a distinct object from brac.
  */
-    public static Bracket createTwinBracket(Bracket brac) {
-       Bracket newBrac=new Bracket(brac.getName());
+    public static MBracket createTwinBracket(MBracket brac) {
+       MBracket newBrac=new MBracket(brac.getName());
        newBrac.setComplement(brac.getComplement());
        newBrac.setIndex(brac.getIndex());
 return newBrac;
     }
 /**
  * non-static version of the above method.
- * This one creates a twin for this Bracket object.
+ * This one creates a twin for this MBracket object.
  * The one above creates a twin for the specified bracket object.
- * @return a Bracket object that manifests exactly
+ * @return a MBracket object that manifests exactly
  * the same attributes as brac but is a distinct object from brac.
  */
-       public Bracket createTwinBracket() {
-       Bracket newBrac=new Bracket(getName());
+       public MBracket createTwinBracket() {
+       MBracket newBrac=new MBracket(getName());
        newBrac.setComplement(getComplement());
        newBrac.setIndex(getIndex());
 return newBrac;
@@ -130,21 +129,21 @@ return newBrac;
 
 /**
  *
- * @return the index of this Bracket object in a scanned function
+ * @return the index of this MBracket object in a scanned function
  */
     public int getIndex() {
         return index;
     }
 /**
  *
- * @param index the ne w index to assign to this Bracket object in a scanned Function
+ * @param index the ne w index to assign to this MBracket object in a scanned Function
  */
     public void setIndex(int index) {
         this.index = index;
     }
 /**
  *
- * @return the name of this Bracket either ( or )
+ * @return the name of this MBracket either ( or )
  */
     public String getName() {
         return name;
@@ -159,26 +158,26 @@ return newBrac;
     }
 /**
  *
- * @return the Bracket object which is the complement of this Bracket object
+ * @return the MBracket object which is the complement of this MBracket object
  */
-    public Bracket getComplement() {
+    public MBracket getComplement() {
         return complement;
     }
 /**
  *
- * @param complement sets the Bracket object which is to be the complement to this one in the scanned Function
+ * @param complement sets the MBracket object which is to be the complement to this one in the scanned Function
  */
-    public void setComplement(Bracket complement) {
+    public void setComplement(MBracket complement) {
         this.complement = complement;
     }
 /**
- * checks if the Bracket object argument below is the
- * sane as the complement to this Bracket object.
- * @param brac The Bracket object whose identity is to be checked
- * whether or not it complements this Bracket object.
+ * checks if the MBracket object argument below is the
+ * sane as the complement to this MBracket object.
+ * @param brac The MBracket object whose identity is to be checked
+ * whether or not it complements this MBracket object.
  * @return true if the parameter is the complement to this one.
  */
-public boolean isComplement(Bracket brac){
+public boolean isComplement(MBracket brac){
         return brac==getComplement();
 }
 /**
@@ -187,7 +186,7 @@ public boolean isComplement(Bracket brac){
  * by this bracket and its complement.
  * @return true if the bracket is enclosed by this bracket and its counterpart.
  */
-public boolean encloses(Bracket brac){
+public boolean encloses(MBracket brac){
    boolean truth=false;
 
    if(this.getIndex()<brac.getIndex() && this.getComplement().getIndex()>brac.getIndex()  ){
@@ -205,9 +204,9 @@ return truth;
 /**
  *
  * @param brac an ArrayList object containing all brackets found in a function
- * @return the number of bracket pairs contained between this Bracket object and its complement
+ * @return the number of bracket pairs contained between this MBracket object and its complement
  */
-public int getNumberOfInternalBrackets( ArrayList<Bracket>brac  ){
+public int getNumberOfInternalBrackets( ArrayList<MBracket>brac  ){
 int num=0;
 int i=0;
 while( i<brac.size()  ){
@@ -330,4 +329,4 @@ public ArrayList<String> getBracketDomainContents( ArrayList<String>scan  ){
 
 
 
-}//end class Bracket
+}//end class MBracket

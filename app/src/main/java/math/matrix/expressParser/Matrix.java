@@ -1300,6 +1300,12 @@ public class Matrix {
      */
     public static void main(String... args) {
 
+        Matrix a = new Matrix(5,5);
+        double arr[][] = {{1,2,3,4,5},{6,7,8,9,0},{1,2,3,4,5},{6,7,8,9,0},{1,2,3,4,5}};
+        a.array = arr;
+        System.out.println("A: "+a);
+        System.out.println("det(A): "+Matrix.det(a));
+
         Matrix m1 = new Matrix(4, 4);
         double array[][] = {{1, -8, 2, 5}, {4, 8, 2, 4}, {6, 5, 2, 1}, {2, 1, 6, 8}};
         m1.array = array;

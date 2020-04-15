@@ -9,3 +9,13 @@
 /build
 /captures
 .externalNativeBuild
+/settings.gradle
+/gradlew.bat
+/gradlew
+/gradle.properties
+/.gitignore
+/gradle/wrapper
+
+
+
+

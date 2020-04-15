@@ -5,6 +5,8 @@
 
 package math;
 
+import util.SimplePoint;
+
 import static java.lang.Math.*;
 /**
  *
@@ -40,15 +42,6 @@ public Point(double x){
 public Point(double x,double y){
     this.x=x;
     this.y=y;
-    this.z=0;
-}
-/**
- * Creates an object of this class from an awt Point object.
- * @param pt The awt Point object
- */
-public Point(util.Point pt){
-    this.x=pt.x;
-    this.y=pt.y;
     this.z=0;
 }
 
@@ -169,8 +162,8 @@ public double findYZGrad(Point pt){
  * @return a java.awt.Point object from
  * this Point object
  */
-public util.Point getAWTPoint(){
-    return new util.Point(  (int)this.x,(int)this.y  );
+public SimplePoint getUtilPoint(){
+    return new SimplePoint(  (int)this.x,(int)this.y  );
 }
 /**
  * Converts objects of this class to
@@ -179,18 +172,10 @@ public util.Point getAWTPoint(){
  * @return a java.awt.Point object from
  * an object of this class.
  */
-public static util.Point getAWTPoint(Point point){
-    return new util.Point(  (int)point.x,(int)point.y  );
+public static SimplePoint getUtilPoint(Point point){
+    return new SimplePoint(  (int)point.x,(int)point.y  );
 }
-/**
- *
- * @param p1 the
- * @return an object of type gameMath.Point
- * from an object of type java.awt.Point
- */
-public static Point getGameMathPoint( util.Point p1){
-    return new Point(  p1.x,p1.y );
-}
+
 
 /**
  *

@@ -36,7 +36,7 @@ public class Topic{
         return title;
     }
 
-    public static Topic parseTopicJson(String json){
+    public static Topic parseTopic(String json){
         JsonReader reader = new JsonReader(new StringReader(json));
         return new Gson().fromJson(reader, Topic.class);
     }

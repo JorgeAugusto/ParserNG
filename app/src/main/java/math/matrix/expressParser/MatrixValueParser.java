@@ -80,7 +80,7 @@ if(values.contains("[")||values.contains("]")||!values.substring(values.length()
         throw new MatrixFormatException("Invalid Matrix Input: " + values);
 }//end if
 else{
-MathScanner mathScanner = new MathScanner(values);
+MmathScanner mathScanner = new MmathScanner(values);
 scan = mathScanner.scanner();
 //recognize negatives and positives.
 for(int i=0;i<scan.size();i++){

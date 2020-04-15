@@ -8,8 +8,6 @@ package math.matrix.expressParser;
 import expressParser.STRING;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import math.Maths;
@@ -20,7 +18,7 @@ import util.FunctionManager;
  * out statistical analysis on a data set consisting of real numbers.
  * @author GBENRO
  */
-public class Set {
+public class MSet {
 /**
  * The data attribute of objects if this class
  */
@@ -32,35 +30,35 @@ private List<String>data=new ArrayList<String>();
  *
  * @param data
  */
-public Set(double...data){
+public MSet(double...data){
 
     for(int i=0;i<data.length;i++){
     this.data.add(data[i]+"");
     }
 }//end constructor
 /**
- * Creates a new Set object initialized
+ * Creates a new MSet object initialized
  * with the specified data set.
  * @param data the data set used
  * to initialize the data attribute of this class
  */
-public Set(List<String>data ){
+public MSet(List<String>data ){
     this.data=data;
 }
 
 /**
- * Creates a new Set object initialized with a set of data coming from a mathematical
+ * Creates a new MSet object initialized with a set of data coming from a mathematical
  * MathExpression.
  * @param function the Math MathExpression from which the
  * set of data is coming.
  * @param data the incoming data set
  */
-public Set( MatrixFunction function,List<String>data ){
+public MSet(MatrixFunction function, List<String>data ){
     System.out.println(data);
      this.data=function.solveSubPortions(data);
 }//end constructor
 
-/*    public Set(math.MathExpression aThis, List<String> executable) {
+/*    public MSet(math.MathExpression aThis, List<String> executable) {
        this.data=aThis.solveSubPortions(executable);
     }
 */
@@ -485,7 +483,7 @@ catch(Exception cnfe){
 
 public static void main( String args[] ){
 
-Set set = new Set(2,3000);
+MSet set = new MSet(2,3000);
 System.out.println( set.permutation() );
 System.out.println( set.combination() );
 System.out.println( set.random() );

@@ -194,7 +194,7 @@ private ArrayList<String> scanner=new ArrayList<String>();
 /**
  *
  * @param firstOpIndex sets the index of the first
- * Operator object in the input
+ * MOperator object in the input
  */
     public void setFirstOpIndex(int firstOpIndex) {
         this.firstOpIndex = firstOpIndex;
@@ -202,7 +202,7 @@ private ArrayList<String> scanner=new ArrayList<String>();
 /**
  *
  * @return the index of the first
- * Operator object in the input
+ * MOperator object in the input
  */
     public int getFirstOpIndex() {
         return firstOpIndex;
@@ -767,7 +767,7 @@ public  String getFirstOperatorInString(  ){
 
   for(int i=0;i<scannerInput.length();i++){
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+15))&&i+15<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+15))&&i+15<=scannerInput.length()){
     opString=scannerInput.substring(i,i+15); setFirstOpIndex(i); break;
    }
     }
@@ -775,7 +775,7 @@ public  String getFirstOperatorInString(  ){
 
  }
  try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+14))&&i+14<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+14))&&i+14<=scannerInput.length()){
     opString=scannerInput.substring(i,i+14);setFirstOpIndex(i);   break;
    }
     }
@@ -783,7 +783,7 @@ public  String getFirstOperatorInString(  ){
 
  }
 try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+13))&&i+13<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+13))&&i+13<=scannerInput.length()){
     opString=scannerInput.substring(i,i+13);setFirstOpIndex(i);   break;
    }
     }
@@ -791,7 +791,7 @@ try{
 
  }
 try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+12))&&i+12<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+12))&&i+12<=scannerInput.length()){
     opString=scannerInput.substring(i,i+12);setFirstOpIndex(i);   break;
    }
     }
@@ -799,7 +799,7 @@ try{
 
  }
  try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+11))&&i+11<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+11))&&i+11<=scannerInput.length()){
     opString=scannerInput.substring(i,i+11);setFirstOpIndex(i);   break;
    }
     }
@@ -807,7 +807,7 @@ try{
 
  }
   try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+10))&&i+10<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+10))&&i+10<=scannerInput.length()){
     opString=scannerInput.substring(i,i+10);setFirstOpIndex(i);   break;
    }
     }
@@ -816,7 +816,7 @@ try{
  }
 
    try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+9))&&i+9<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+9))&&i+9<=scannerInput.length()){
     opString=scannerInput.substring(i,i+9);setFirstOpIndex(i);   break;
    }
     }
@@ -825,7 +825,7 @@ try{
  }
 
    try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+8))&&i+8<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+8))&&i+8<=scannerInput.length()){
     opString=scannerInput.substring(i,i+8);setFirstOpIndex(i);   break;
    }
     }
@@ -833,7 +833,7 @@ try{
 
  }
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+7))&&i+7<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+7))&&i+7<=scannerInput.length()){
     opString=scannerInput.substring(i,i+7);setFirstOpIndex(i);   break;
    }
     }
@@ -841,7 +841,7 @@ try{
 
  }
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+6))&&i+6<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+6))&&i+6<=scannerInput.length()){
     opString=scannerInput.substring(i,i+6);setFirstOpIndex(i);   break;
    }
     }
@@ -849,7 +849,7 @@ try{
 
  }
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+5))&&i+5<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+5))&&i+5<=scannerInput.length()){
     opString=scannerInput.substring(i,i+5);setFirstOpIndex(i);   break;
    }
       }//end try
@@ -857,7 +857,7 @@ try{
 
  }
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+4))&&i+4<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+4))&&i+4<=scannerInput.length()){
     opString=scannerInput.substring(i,i+4);setFirstOpIndex(i);   break;
    }
       }//end try
@@ -865,7 +865,7 @@ try{
 
  }//end catch
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+3))&&i+3<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+3))&&i+3<=scannerInput.length()){
     opString=scannerInput.substring(i,i+3);setFirstOpIndex(i);   break;
    }
        }//end try
@@ -873,7 +873,7 @@ try{
 
  }//end catch
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+2))&&i+2<=scannerInput.length()){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+2))&&i+2<=scannerInput.length()){
     opString=scannerInput.substring(i,i+2);setFirstOpIndex(i);   break;
    }
     }//end try
@@ -881,7 +881,7 @@ try{
 
  }//end catch
       try{
-   if(Operator.isOperatorString(scannerInput.substring(i,i+1))){
+   if(MOperator.isOperatorString(scannerInput.substring(i,i+1))){
 opString=scannerInput.substring(i,i+1);
     setFirstOpIndex(i);
     break;
@@ -905,7 +905,7 @@ public  int getFirstIndexOfOperator(){
 }
 /**
  *
- * @return an ArrayList of all Operator object names in the
+ * @return an ArrayList of all MOperator object names in the
  */
 public  ArrayList<String> getOperatorStrings(){
   ArrayList<String>split=new ArrayList<String>();
@@ -1025,8 +1025,8 @@ public  List<String> splitListOnVariables( List<String> val ){
 
 
 /**
- * Identifies that the input is a valid one by checking that all tokens are either Number objects, Variable objects
- * or Operator objects. Then it registers any Variable object found and initializes it to zero.
+ * Identifies that the input is a valid one by checking that all tokens are either MNumber objects, Variable objects
+ * or MOperator objects. Then it registers any Variable object found and initializes it to zero.
  */
     public void validateTokens(){
        for(int i=0;i<scanner.size();i++){
@@ -1077,7 +1077,7 @@ for(int i=0;i<scanner.size();i++){
     //The second boolean condition is added to avoid splitting exponential numbers because they contain E
     //the power of 10 operator
     split.clear();
-        if( !Operator.isOperatorString( scanner.get(i))&&!isNumber(scanner.get(i)) ){
+        if( !MOperator.isOperatorString( scanner.get(i))&&!isNumber(scanner.get(i)) ){
             try{
          split=splitStringOnVariables(scanner.get(i));
          scanner.remove(i);
@@ -1159,7 +1159,7 @@ for(int i=0;i<scanner.size();i++){
     //The second boolean condition is added to avoid splitting exponential numbers because they contain E
     //the power of 10 operator
     split.clear();
-        if( !Operator.isOperatorString( scanner.get(i))&&!isNumber(scanner.get(i)) ){
+        if( !MOperator.isOperatorString( scanner.get(i))&&!isNumber(scanner.get(i)) ){
             try{
          split=splitStringOnVariables(scanner.get(i));
          scanner.remove(i);
@@ -1236,7 +1236,7 @@ for(int i=0;i<scanner.size();i++){
         setRunnable(false);
     }
 
-    if(!isMatrixVariableName(scanner.get(i))&&!Variable.isVariableString(scanner.get(i))&&!Operator.isOperatorString(scanner.get(i))&&!expressParser.Number.isNumber(scanner.get(i))){
+    if(!isMatrixVariableName(scanner.get(i))&&!Variable.isVariableString(scanner.get(i))&&!MOperator.isOperatorString(scanner.get(i))&&!expressParser.Number.isNumber(scanner.get(i))){
         errorList.add("Syntax Error! Strange Object Found: "+scanner.get(i));
         setRunnable(false);
     }

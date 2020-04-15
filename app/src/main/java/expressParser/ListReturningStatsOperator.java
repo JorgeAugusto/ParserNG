@@ -321,7 +321,7 @@ errorMessage+="\n Bad Syntax! Do Not Embed "+getName()+" In Parentheses Belongin
             // and their operands within brackets e.g sort(3,2,4)+((sort(1,3,1,-9,3))
 if(!isOpeningBracket(scan.get(i))){
                 openBracsOnly = false;
-errorMessage+="\n Bracket Sequence Established. Trend Finished. Apllying Other Validation Techniques.";
+errorMessage+="\n MBracket Sequence Established. Trend Finished. Apllying Other Validation Techniques.";
 }
        
 if(openBracsOnly&&isBinaryOperator( scan.get(i-1) )||isUnaryPreOperatorORDefinedMethod(scan.get(i-1))){

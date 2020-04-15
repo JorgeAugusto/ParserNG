@@ -15,9 +15,9 @@ import static expressParser.Variable.*;
  *
  * @author GBEMIRO
  */
-public class BinaryOperator extends Operator implements Validatable{
+public class MBinaryOperator extends MOperator implements Validatable{
     /**
-     * The precedence of this BinaryOperator object.
+     * The precedence of this MBinaryOperator object.
      */
    private final Precedence precedence;
     /**
@@ -27,22 +27,22 @@ public class BinaryOperator extends Operator implements Validatable{
     private int index;
 /**
  *
- * @param name the name that identifies the BinaryOperator object
+ * @param name the name that identifies the MBinaryOperator object
  * @param index The index of this operator
  * in the scanned Function that it belongs to.
  * @param function the Function object that this
- * BinaryOperator object belongs to.
+ * MBinaryOperator object belongs to.
  */
-public BinaryOperator(String name,int index,ArrayList<String>scan){
+public MBinaryOperator(String name, int index, ArrayList<String>scan){
     super( isBinaryOperator(name)?name:"");
 
         if(this.getName().equals("")){
-            throw new IndexOutOfBoundsException("Invalid Name For Binary Operator."  );
+            throw new IndexOutOfBoundsException("Invalid Name For Binary MOperator."  );
         }//end if
 
         else{
             this.index=(index>=0&&scan.get(index).equals(name))?index:-1;
-                this.precedence=Operator.getPrecedence(name);
+                this.precedence=MOperator.getPrecedence(name);
         }//end else
     
     if(this.index==-1){
@@ -87,7 +87,7 @@ public BinaryOperator(String name,int index,ArrayList<String>scan){
 
 /**
  * @param function the Function object
- * that this BinaryOperator object exists in.
+ * that this MBinaryOperator object exists in.
  * validates the grammatical usage of this operator (by leaving the correctFunction attribute of the function object un-modified)
  * if the usage of this operator
  * in its immediate environment i.e to its left and right is correct.

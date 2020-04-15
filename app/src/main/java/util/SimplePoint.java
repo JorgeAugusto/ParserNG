@@ -1,19 +1,19 @@
 package util;
 
-public class Point {
+public class SimplePoint {
 
 	public int x;
 	public int y;
 	
-	public Point() {
+	public SimplePoint() {
 
      }
 	
-	public Point(int x,int y){
+	public SimplePoint(int x, int y){
 		this.x = x;
 		this.y = y;
 	}
-	public Point(Point p){
+	public SimplePoint(SimplePoint p){
 		this.x = p.x;
 		this.y = p.y;
 	}

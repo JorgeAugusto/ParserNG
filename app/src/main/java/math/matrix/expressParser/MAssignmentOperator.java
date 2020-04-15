@@ -11,6 +11,6 @@ import expressParser.*;
  *
  * @author GBEMIRO
  */
-public class AssignmentOperator {
+public class MAssignmentOperator {
 
 }

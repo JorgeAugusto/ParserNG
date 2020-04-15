@@ -5,41 +5,31 @@
 
 package math.matrix.expressParser;
 
-import expressParser.*;
 import java.util.ArrayList;
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
 
 /**
  *
  * @author GBEMIRO
  */
-public final class MultiplicationOperator extends MatrixBinaryOperator{
+public final class MAdditionOperator extends MBinaryOperator {
 
-
-   
 //Č
 
 /**
  * Creates an object of class
- * MultiplicationOperator
+ * MAdditionOperator
  *
  * @param index the index of this object in its
  * parent Function object's scanner.
  * @param function the Function object in which this
- * MultiplicationOperator exists.
+ * MAdditionOperator exists.
  *
  */
-    public MultiplicationOperator( int index,ArrayList<String>scan){
-        super("*", index, scan);
+    public MAdditionOperator(int index, ArrayList<String>scan){
+        super("+", index, scan);
     }//end constructor
 
 
+   
 
-
-
-
-
-  
-
-}//end class MultiplicationOperator
+}//end class MAdditionOperator

@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 
 import java.io.StringReader;
 import java.util.InputMismatchException;
+
 import math.Maths;
 import java.util.NoSuchElementException;
 import static expressParser.STRING.*;
@@ -568,7 +569,7 @@ else{
 
     public static Variable parse(String json){
         Gson gson = new Gson();
-         return gson.fromJson(new StringReader(json), Variable.class);
+        return gson.fromJson(new StringReader(json), Variable.class);
     }
 
     public String getSerialize(){

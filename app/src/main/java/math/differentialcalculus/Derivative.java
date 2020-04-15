@@ -246,7 +246,7 @@ public class Derivative {
 
             //String expression = "diff(@(x)cbrt(x)+sqrt(x),2)";///√
             //String expression = "diff(@(x)(3*x+√√x)^2,2,1)";
-
+//8x.sin(x^2)+8x^3.cos(x^2)-1
 
             String expression = "diff(@(x)4*x*x*sin(x^2)-x,3,1)";
             //System.out.println(Derivative.eval(expression));

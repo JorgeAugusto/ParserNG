@@ -206,7 +206,6 @@ public class MathScanner {
          * There should be an operator symbol before the first number
          * but in this scenario we do not handle that.
          *
-         *
          */
         String num1 = "";
         String num2 = "";
@@ -526,7 +525,7 @@ public class MathScanner {
         filter.add("");
         filter.add(",");
         scanner.addAll(cs.scan());
-        System.err.println("At the start: "+scanner);
+
         for (int i = 0; i < scanner.size(); i++) {
             String token = scanner.get(i);
 
@@ -948,7 +947,7 @@ public class MathScanner {
     public ArrayList<String> scanner(VariableManager varMan) {
         splitStringOnMethods_Variables_And_Operators();
         validateInputAfterSplitOnMethodsAndOps();
-        System.out.println("<<>> "+scanner);
+
         /*
          * Re-build the negative numbers in a statistical
          * data set. e.g 2,-3,4... is translated into 2, ~3, 4

@@ -12,25 +12,32 @@ import java.util.ArrayList;
  *
  * @author GBEMIRO
  */
-public final class AdditionOperator extends BinaryOperator{
-
+public final class MSubtractionOperator extends MatrixBinaryOperator{
+  
 //Č
 
 /**
  * Creates an object of class
- * AdditionOperator
+ * MSubtractionOperator
  *
  * @param index the index of this object in its
  * parent Function object's scanner.
  * @param function the Function object in which this
- * AdditionOperator exists.
+ * MSubtractionOperator exists.
  *
  */
-    public AdditionOperator( int index,ArrayList<String>scan){
-        super("+", index, scan);
+    public MSubtractionOperator(int index, ArrayList<String>scan){
+        super("-", index, scan);
     }//end constructor
 
 
-   
 
-}//end class AdditionOperator
+
+
+
+
+
+
+
+
+}//end class MSubtractionOperator

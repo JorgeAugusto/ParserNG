@@ -7,27 +7,31 @@ package math.matrix.expressParser;
 
 import expressParser.*;
 import java.util.ArrayList;
+import static expressParser.Number.*;
+import static expressParser.Variable.*;
 
 /**
  *
  * @author GBEMIRO
  */
-public final class SubtractionOperator extends MatrixBinaryOperator{
-  
+public final class MmultiplicationOperator extends MatrixBinaryOperator{
+
+
+   
 //Č
 
 /**
  * Creates an object of class
- * SubtractionOperator
+ * MmultiplicationOperator
  *
  * @param index the index of this object in its
  * parent Function object's scanner.
  * @param function the Function object in which this
- * SubtractionOperator exists.
+ * MmultiplicationOperator exists.
  *
  */
-    public SubtractionOperator( int index,ArrayList<String>scan){
-        super("-", index, scan);
+    public MmultiplicationOperator(int index, ArrayList<String>scan){
+        super("*", index, scan);
     }//end constructor
 
 
@@ -36,8 +40,6 @@ public final class SubtractionOperator extends MatrixBinaryOperator{
 
 
 
+  
 
-
-
-
-}//end class SubtractionOperator
+}//end class MmultiplicationOperator

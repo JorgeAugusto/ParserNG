@@ -7,7 +7,7 @@ package expressParser;
 import static expressParser.LISTS.*;
 import static expressParser.Number.*;
 import static expressParser.Variable.*;
-import util.Point;
+import util.SimplePoint;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -260,7 +260,7 @@ public class Bracket extends Operator {
                 }
             }//end for
         } else if (i == j) {
-            throw new InputMismatchException("Open Bracket Cannot Be On The Same Index As Closing Bracket");
+            throw new InputMismatchException("Open MBracket Cannot Be On The Same Index As Closing MBracket");
         }
         return true;
     }//end method
@@ -602,7 +602,7 @@ public class Bracket extends Operator {
 
 
         ArrayList<String> scan = new ArrayList<String>();
-        ArrayList<Point> map = new ArrayList<Point>();
+        ArrayList<SimplePoint> map = new ArrayList<SimplePoint>();
         ArrayList<Bracket> bracs = new ArrayList<Bracket>();
 
 
@@ -614,7 +614,7 @@ public class Bracket extends Operator {
         while (close != -1) {
             try {
                 open = prevIndexOf(scan, close, "(");
-                map.add(new Point(open, close));
+                map.add(new SimplePoint(open, close));
                 Bracket openBrac = new Bracket("(");
                 Bracket closeBrac = new Bracket(")");
                 openBrac.setIndex(open);

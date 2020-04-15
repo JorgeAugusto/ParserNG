@@ -300,7 +300,7 @@ public class GenericBracket {
                 }
             }//end for
         } else if (i == j) {
-            throw new InputMismatchException("Open Bracket Cannot Be On The Same Index As Closing Bracket");
+            throw new InputMismatchException("Open MBracket Cannot Be On The Same Index As Closing MBracket");
         }
         return true;
     }//end method

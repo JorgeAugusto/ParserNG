@@ -57,7 +57,7 @@ return true;
 
 public static void main(String args[]){
     double time = System.nanoTime();
-    PrimeNumber num = new PrimeNumber(37771729L);
+    PrimeNumber num = new PrimeNumber(3777172998448777375L);
     System.out.println("\n\n"+ ( ( System.nanoTime()-time )/1.0E6 )+" ms."   );
 }//end method
 

@@ -1531,6 +1531,15 @@ public class Method {
         System.out.println(Method.isMethodName("F"));
         System.out.println(isMethodNameBeginner("Č"));
 
+StringBuilder builder = new StringBuilder();
+        for(String name : inbuiltMethods){
+    builder.append(name).append(",");
+        }
+
+
+        System.out.println(builder);
+
+
     }
 
 }//end class
