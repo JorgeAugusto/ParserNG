@@ -87,7 +87,7 @@ public class MathScanner {
                     if (scannerInput.substring(i + 1, i + 2).equals(Operator.PLUS)) {
                         scannerInput = STRING.replace(scannerInput, "±", i + 1, i + 2);
                     } else if (scannerInput.substring(i + 1, i + 2).equals(Operator.MINUS)) {
-                        scannerInput = STRING.replace(scannerInput, "–", i + 1, i + 2);//replacing the minus operator with the En-Dash symbol
+                        scannerInput = STRING.replace(scannerInput, EN_DASH, i + 1, i + 2);//replacing the minus operator with the En-Dash symbol
                     }
                 }
 
@@ -609,6 +609,11 @@ public class MathScanner {
                 scanner.set(i, replace(scanner.get(i), "-", index, index + 1));
             }
             if (isOpeningBracket(scanner.get(i)) && scanner.get(i + 1).equals("-") && isNumber(scanner.get(i + 2))) {
+
+                int index = scanner.get(i+2).indexOf(EN_DASH);
+                if (index != -1) {//In case the number at i+2 contains an EN_DASH, replace it with a minus
+                    scanner.set(i+2, replace(scanner.get(i+2), MINUS, index, index + 1));
+                }
                 scanner.set(i + 1, String.valueOf(-1 * Double.parseDouble(scanner.get(i + 2))));
                 scanner.remove(i + 2);
             }

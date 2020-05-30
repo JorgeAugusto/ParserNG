@@ -20,10 +20,12 @@ private String name;
 
 
 
+
     public static final String PLUS = "+";
     public static final String MINUS = "-";
     public static final String DIVIDE = "/";
     public static final String MULTIPLY = "*";
+    public static final String EN_DASH = "–";
     public static final String FACTORIAL = "!";
     public static final String POWER = "^";
     public static final String LESS_THAN = "<";
