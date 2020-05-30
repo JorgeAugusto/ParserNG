@@ -78,15 +78,15 @@ public class MathScanner {
                 if (scannerInput.substring(i, i + 1).equals("π")) {
                     scannerInput = STRING.replace(scannerInput, "pi", i, i + 1);
                 } else if (scannerInput.substring(i, i + 1).equals("×")) {
-                    scannerInput = STRING.replace(scannerInput, Operator.MULTIPLY, i, i + 1);
+                    scannerInput = STRING.replace(scannerInput, MULTIPLY, i, i + 1);
                 } else if (scannerInput.substring(i, i + 1).equals("÷")) {
-                    scannerInput = STRING.replace(scannerInput, Operator.DIVIDE, i, i + 1);
+                    scannerInput = STRING.replace(scannerInput, DIVIDE, i, i + 1);
                 } else if (scannerInput.substring(i, i + 1).equalsIgnoreCase("E")
                         && isDigit(scannerInput.substring(i + 2, i + 3))) {
 
-                    if (scannerInput.substring(i + 1, i + 2).equals(Operator.PLUS)) {
+                    if (scannerInput.substring(i + 1, i + 2).equals(PLUS)) {
                         scannerInput = STRING.replace(scannerInput, "±", i + 1, i + 2);
-                    } else if (scannerInput.substring(i + 1, i + 2).equals(Operator.MINUS)) {
+                    } else if (scannerInput.substring(i + 1, i + 2).equals(MINUS)) {
                         scannerInput = STRING.replace(scannerInput, EN_DASH, i + 1, i + 2);//replacing the minus operator with the En-Dash symbol
                     }
                 }
@@ -104,7 +104,7 @@ public class MathScanner {
          */
         for (int i = 0; i < scannerInput.length(); i++) {
             if (scannerInput.substring(i, i + 1).equals(",")
-                    && scannerInput.substring(i + 1, i + 2).equals(Operator.MINUS)
+                    && scannerInput.substring(i + 1, i + 2).equals(MINUS)
                     && (scannerInput.substring(i + 2, i + 3).equals(".") || isDigit(scannerInput.substring(i + 2, i + 3)))) {
                 scannerInput = replace(scannerInput, "~", i + 1, i + 2);
             }
