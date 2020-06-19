@@ -5,13 +5,14 @@
 
 package math.numericalmethods;
 
-import expressParser.Bracket;
-import expressParser.Variable;
+import com.itis.libs.parserng.android.expressParser.Number;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import com.itis.libs.parserng.android.expressParser.Variable;
 import java.util.InputMismatchException;
-import expressParser.Function;
-import expressParser.LISTS;
-import expressParser.MathExpression;
-import expressParser.Operator;
+import com.itis.libs.parserng.android.expressParser.Function;
+import com.itis.libs.parserng.android.expressParser.LISTS;
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import com.itis.libs.parserng.android.expressParser.Operator;
 import util.FunctionManager;
 import static java.lang.Math.*;
 import java.util.Arrays;
@@ -345,7 +346,7 @@ public class RootFinder {
             args1 = list.get(3);
             //args2 = list.get(4);
             //args3 = list.get(5);
-            if(!expressParser.Number.validNumber(args1)){
+            if(!Number.validNumber(args1)){
                 list.clear();
             }
         }

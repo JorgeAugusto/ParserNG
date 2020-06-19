@@ -5,11 +5,9 @@
 
 package math.matrix.expressParser;
 import java.util.ArrayList;
-import static expressParser.STRING.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
- 
-import static expressParser.methods.Method.*;
+import static com.itis.libs.parserng.android.expressParser.STRING.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 
 /**
  *
@@ -182,9 +180,9 @@ ArrayList<String>scan= function.getScanner();
      !isBinaryOperator(scan.get(index-1))&&!isAssignmentOperator(scan.get(index-1))
       &&!isStatsMethod(scan.get(index-1))&&!isNumber(scan.get(index-1)) &&!isVariableString(scan.get(index-1))  ){
               util.Utils.logError(
-            "Mathron Does Not Allow "+num+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
+            "ParserNG Does Not Allow "+num+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Numbers!" );
+            "ParserNG Error Detector For Numbers!" );
          function.setCorrectFunction(false);  scan.clear();
          }//end if
        //specify valid tokens that can come after a number
@@ -194,9 +192,9 @@ ArrayList<String>scan= function.getScanner();
             !isUnaryPreOperator(scan.get(index+1))&&!isNumberReturningStatsMethod(scan.get(index+1))
              &&!isLogToAnyBase(scan.get(index+1))&&!isAntiLogToAnyBase(scan.get(index+1))&&!isNumber(scan.get(index+1)) &&!isVariableString(scan.get(index+1))){
              util.Utils.logError(
-            "Mathron Does Not Allow "+num+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
+            "ParserNG Does Not Allow "+num+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Numbers!" );
+            "ParserNG Error Detector For Numbers!" );
              function.setCorrectFunction(false);  scan.clear();
          }//end if
          }//end try

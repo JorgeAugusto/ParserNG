@@ -4,15 +4,15 @@
  */
 package math.differentialcalculus;
 
-import expressParser.Bracket;
-import expressParser.CustomScanner;
-import expressParser.Operator;
-import expressParser.Variable;
-import static expressParser.Number.*;
-import static expressParser.Operator.*;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import com.itis.libs.parserng.android.expressParser.CustomScanner;
+import com.itis.libs.parserng.android.expressParser.Operator;
+import com.itis.libs.parserng.android.expressParser.Variable;
+
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
 import static math.differentialcalculus.Methods.*;
-import expressParser.STRING;
-import static expressParser.Variable.*;
+import com.itis.libs.parserng.android.expressParser.STRING;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 import java.util.ArrayList;
 /**
  *

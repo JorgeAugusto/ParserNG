@@ -4,15 +4,13 @@
  */
 package math.differentialcalculus;
 
-import expressParser.Bracket;
 import java.util.ArrayList;
-import static expressParser.Number.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 
 import java.util.List;
 import static math.differentialcalculus.Utilities.*;
-import static expressParser.methods.Method.*;
 
 
 /**
@@ -35,9 +33,7 @@ public class Differentiable {
      * be differentiated with respect to.
      */
     public static final String basevariable = "x";
-
-
-    public static final Differentiable baseDifferentiable = new Differentiable(basevariable);
+    
 
 
     /**
@@ -176,7 +172,6 @@ public class Differentiable {
     @SuppressWarnings("unused")
     public ArrayList<String> differentiate(Derivative d){
         ArrayList<String>derivedData = new ArrayList<>();
-        print("Differentiating data: "+data);
         handleStrangeFormats:{
             //turn (,-,var,) to (,-1,*,var,)
             if(data.get(0).equals("(")&&data.get(1).equals("-")&&isVariableString(data.get(2))&&isClosingBracket(data.get(3))){

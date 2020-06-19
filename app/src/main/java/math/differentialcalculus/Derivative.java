@@ -4,10 +4,10 @@
  */
 package math.differentialcalculus;
 
-import expressParser.MathExpression;
-import static expressParser.Number.*;
-import expressParser.Parser_Result;
-import static expressParser.Variable.*;
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import com.itis.libs.parserng.android.expressParser.Parser_Result;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

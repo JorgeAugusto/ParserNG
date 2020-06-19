@@ -5,17 +5,17 @@
 
 package math.numericalmethods;
 
-import expressParser.Function;
+import com.itis.libs.parserng.android.expressParser.Function;
 import java.util.InputMismatchException;
-import expressParser.MathExpression;
-import expressParser.MathScanner;
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import com.itis.libs.parserng.android.expressParser.MathScanner;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Vector;
+
 import math.matrix.expressParser.Matrix;
 import math.matrix.expressParser.PrecisionMatrix;
 import static java.lang.Math.*;
-import static expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
 /**
  *
  * Objects of this class take a function

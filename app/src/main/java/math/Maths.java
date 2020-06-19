@@ -1,7 +1,7 @@
 package math;
 
 
-import expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.STRING;
 
 import static java.lang.Math.*;
 

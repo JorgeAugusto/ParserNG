@@ -4,17 +4,17 @@
  */
 package math.differentialcalculus;
 
-import expressParser.Bracket;
-import expressParser.Operator;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import com.itis.libs.parserng.android.expressParser.Operator;
 import java.util.ArrayList;
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
-import static expressParser.Operator.*;
-import static expressParser.Bracket.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Bracket.*;
 import static math.differentialcalculus.Utilities.*;
-import expressParser.PowerOperator;
-import expressParser.UnaryPostOperator;
-import static expressParser.methods.Method.*;
+import com.itis.libs.parserng.android.expressParser.PowerOperator;
+import com.itis.libs.parserng.android.expressParser.UnaryPostOperator;
+
 import java.util.List;
 
 /**
@@ -173,7 +173,7 @@ public class SemanticAnalyzer {
                     if (!isOpeningBracket(scanner.get(i - 1))
                             && !isLogicOperator(scanner.get(i - 1)) && !isUnaryPreOperatorORDefinedMethod(scanner.get(i - 1))
                             && !isBinaryOperator(scanner.get(i - 1)) && !isAssignmentOperator(scanner.get(i - 1)) && !isNumber(scanner.get(i - 1)) && !isVariableString(scanner.get(i - 1))) {
-                        //processLogger.writeLog("Mathron Does Not Allow "+expression+" To Combine The MathExpression Members \""+scanner.get(i-1)+"\" And \""+scanner.get(i)+"\"\n");
+                        //processLogger.writeLog("ParserNG Does Not Allow "+expression+" To Combine The MathExpression Members \""+scanner.get(i-1)+"\" And \""+scanner.get(i)+"\"\n");
 
                         scanner.clear();
                         break;
@@ -185,7 +185,7 @@ public class SemanticAnalyzer {
                             && !isUnaryPreOperatorORDefinedMethod(scanner.get(i + 1))
                             && !isLogToAnyBase(scanner.get(i + 1)) && !isAntiLogToAnyBase(scanner.get(i + 1))
                             && !isNumber(scanner.get(i + 1)) && !isVariableString(scanner.get(i + 1))) {
-                        //processLogger.writeLog("Mathron Does Not Allow "+expression+" To Combine The MathExpression Members \""+scanner.get(i)+"\" And \""+scanner.get(i+1)+"\""+" As You Have Done.\n");
+                        //processLogger.writeLog("ParserNG Does Not Allow "+expression+" To Combine The MathExpression Members \""+scanner.get(i)+"\" And \""+scanner.get(i+1)+"\""+" As You Have Done.\n");
 
                         scanner.clear();
                         break;

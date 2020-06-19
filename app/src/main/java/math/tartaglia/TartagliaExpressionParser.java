@@ -4,16 +4,16 @@
  */
 
 package math.tartaglia;
-import expressParser.STRING;
-import expressParser.CustomScanner;
-import expressParser.LISTS;
-import expressParser.MathScanner;
+import com.itis.libs.parserng.android.expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.CustomScanner;
+import com.itis.libs.parserng.android.expressParser.LISTS;
+import com.itis.libs.parserng.android.expressParser.MathScanner;
 import java.util.ArrayList;
-import java.util.Vector;
-import static expressParser.STRING.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
-import static expressParser.Number.*;
+
+import static com.itis.libs.parserng.android.expressParser.STRING.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
 import java.util.List;
 import math.differentialcalculus.Formula;
 /**

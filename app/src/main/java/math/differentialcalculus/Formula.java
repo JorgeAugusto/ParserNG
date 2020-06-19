@@ -4,16 +4,13 @@
  */
 package math.differentialcalculus;
 
-import expressParser.LISTS;
-import expressParser.MathExpression;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import static math.differentialcalculus.Utilities.*;
-import static expressParser.Number.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;

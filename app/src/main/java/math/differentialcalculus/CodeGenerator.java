@@ -5,12 +5,12 @@
  */
 package math.differentialcalculus;
 
-import expressParser.Bracket;
-import static expressParser.Number.*;
-import static expressParser.Operator.*;
-import expressParser.STRING;
-import static expressParser.Variable.*;
-import static expressParser.methods.Method.*;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import com.itis.libs.parserng.android.expressParser.STRING;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+
 import java.util.ArrayList;
 import java.util.List;
 

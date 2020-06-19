@@ -6,14 +6,16 @@
 package math.matrix.expressParser;
 
 
+import com.itis.libs.parserng.android.expressParser.STRING;
+
 import expressParser.*;
 import util.Dimension;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import util.MatrixFormatException;
-import static expressParser.Number.*;
-import static expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
 /**
  *
  * Objects of this class extract
@@ -47,7 +49,7 @@ public class MatrixValueParser {
  * @param values A matrix value string e.g  [2,4,5:3,9.939,45.2:1,4,2:]
  */
         public MatrixValueParser(String values) {
-            this.values=STRING.purifier(values);
+            this.values= STRING.purifier(values);
 
          try{
            scanner();

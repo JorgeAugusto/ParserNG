@@ -6,16 +6,15 @@
 package math.matrix.equationParser;
 
 import math.matrix.expressParser.Matrix;
-import expressParser.CustomScanner;
-import expressParser.MathScanner;
-import expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.CustomScanner;
+import com.itis.libs.parserng.android.expressParser.STRING;
 import java.util.ArrayList;
 import java.util.List;
 import util.ErrorLog;
-import static expressParser.STRING.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
-import static expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.STRING.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
 /**
  *
  * @author JIBOYE Oluwagbemiro Olaoluwa

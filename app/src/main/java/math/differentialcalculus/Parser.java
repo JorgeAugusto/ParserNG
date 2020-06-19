@@ -5,20 +5,17 @@
  */
 package math.differentialcalculus;
 
-import expressParser.Bracket;
-import expressParser.CustomScanner;
-import expressParser.DataSetFormatter;
-import expressParser.Function;
-import expressParser.LISTS;
-import expressParser.MathExpression;
-import expressParser.MathScanner;
-import expressParser.Operator;
-import static expressParser.Operator.isComma;
-import static expressParser.Operator.isOpeningBracket;
-import expressParser.Parser_Result;
-import expressParser.Variable;
+import com.itis.libs.parserng.android.expressParser.Number;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import com.itis.libs.parserng.android.expressParser.DataSetFormatter;
+import com.itis.libs.parserng.android.expressParser.Function;
+import com.itis.libs.parserng.android.expressParser.LISTS;
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import com.itis.libs.parserng.android.expressParser.MathScanner;
+import com.itis.libs.parserng.android.expressParser.Operator;
+import com.itis.libs.parserng.android.expressParser.Parser_Result;
+import com.itis.libs.parserng.android.expressParser.Variable;
 import java.util.Arrays;
-import java.util.InputMismatchException;
 import java.util.List;
 import util.FunctionManager;
 import util.VariableManager;
@@ -32,11 +29,12 @@ import util.VariableManager;
  * diff(@(x)sin(x),5)... diff(@(x)sin(x),5,2)... diff(y,5)... diff(y,5,2)...
  *
  * The first command means the function, sin(x) is to be differentiated wrt x,
- * and evaluated at x = 5. The second command means the function, sin(x) is to
- * be differentiated wrt x, twice and then evaluated at x = 5. The third command
- * means that a function called y has been pre-defined. The parser will load the
- * function and differentiate it wrt x, and then evaluate it at x = 5. The
- * fourth command means that a function called y has been pre-defined. The
+ * and evaluated at x = 5.
+ * The second command means the function, sin(x) is to
+ * be differentiated wrt x, twice and then evaluated at x = 5.
+ * The third command means that a function called y has been pre-defined. The parser will load the
+ * function and differentiate it wrt x, and then evaluate it at x = 5.
+ * The fourth command means that a function called y has been pre-defined. The
  * parser will load the function and differentiate it wrt x, twice, and then
  * evaluate it at x = 5.
  *
@@ -195,8 +193,8 @@ public class Parser {
             if (Bracket.isCloseBracket(args1 = list.get(3))) {
                 this.diffType = GRAD_FUNC;
                 this.orderOfDifferentiation = 1;
-            } else if (expressParser.Number.validNumber(args1)) {//detect first arg
-                if (expressParser.Number.validNumber(args2 = list.get(4))) {//detect second arg
+            } else if (Number.validNumber(args1)) {//detect first arg
+                if (Number.validNumber(args2 = list.get(4))) {//detect second arg
                     this.diffType = GRAD_VAL;
                     this.evalPoint = Double.parseDouble(args1);
                     this.orderOfDifferentiation = (int) Double.parseDouble(args2);

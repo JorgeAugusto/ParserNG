@@ -5,7 +5,7 @@
 
 package math.matrix.util;
 
-import expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.STRING;
 import java.util.ArrayList;
 import java.util.Random;
 

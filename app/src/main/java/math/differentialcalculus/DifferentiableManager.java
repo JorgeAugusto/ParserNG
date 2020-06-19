@@ -7,7 +7,7 @@ package math.differentialcalculus;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
 
 /**
  *
@@ -136,7 +136,7 @@ return getDifferentiable(name);
 
 /**
  *
- * @param f The Differentiable object to add to this object.
+ * @param diff The Differentiable object to add to this object.
  */
 public void add( Differentiable diff ){
 if(!contains(diff.getName())){   

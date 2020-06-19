@@ -5,17 +5,20 @@
 
 package math.matrix.expressParser;
 
+import com.itis.libs.parserng.android.expressParser.Precedence;
+import com.itis.libs.parserng.android.expressParser.Validatable;
+
 import expressParser.*;
 import java.util.ArrayList;
  
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 
 /**
  *
  * @author GBEMIRO
  */
-public class MBinaryOperator extends MOperator implements Validatable{
+public class MBinaryOperator extends MOperator implements Validatable {
     /**
      * The precedence of this MBinaryOperator object.
      */
@@ -103,9 +106,9 @@ boolean correct=true;
         if(!isNumber(scan.get(index-1))&&!isVariableString(scan.get(index-1))&&
             !isUnaryPostOperator(scan.get(index-1))&&!isClosingBracket(scan.get(index-1))&&!isOpeningBracket(scan.get(index-1))){
            util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Binary Operators!" );
+            "ParserNG Error Detector For Binary Operators!" );
             System.out.println(scan);
              correct=false;  scan.clear();
 
@@ -116,9 +119,9 @@ boolean correct=true;
              !isUnaryPreOperator(scan.get(index+1))
                  ){
              util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Binary Operators!" );
+            "ParserNG Error Detector For Binary Operators!" );
                System.out.println(scan);
              correct=false;   scan.clear();
          }//end if
@@ -131,9 +134,9 @@ boolean correct=true;
             !isUnaryPostOperator(scan.get(index-1))&&!isClosingBracket(scan.get(index-1))
           ){
            util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Binary Operators!" );
+            "ParserNG Error Detector For Binary Operators!" );
             System.out.println(scan);
              correct=false;  scan.clear();
          }//end if
@@ -143,9 +146,9 @@ boolean correct=true;
              !isUnaryPreOperator(scan.get(index+1))
                  ){
              util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Binary Operators!" );
+            "ParserNG Error Detector For Binary Operators!" );
                System.out.println(scan);
              correct=false;   scan.clear();
          }//end if

@@ -5,10 +5,13 @@
 
 package math.matrix.expressParser;
 
+import com.itis.libs.parserng.android.expressParser.Precedence;
+import com.itis.libs.parserng.android.expressParser.Validatable;
+
 import expressParser.*;
 import java.util.ArrayList;
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
  
 
 /**
@@ -18,7 +21,7 @@ import static expressParser.Variable.*;
  *
  * @author GBEMIRO
  */
-public class MUnaryPostOperator extends MOperator implements Validatable{
+public class MUnaryPostOperator extends MOperator implements Validatable {
 
     
     /**
@@ -93,9 +96,9 @@ public boolean  validate(ArrayList<String>scan){
           !isVariableString(scan.get(index-1))&&!isUnaryPostOperator(scan.get(index-1))
           ){
            util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index-1)+"\" And \""+scan.get(index)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector For Post-number operators!" );
+            "ParserNG Error Detector For Post-number operators!" );
              correct=false;
              scan.clear();
          }//end if
@@ -105,9 +108,9 @@ public boolean  validate(ArrayList<String>scan){
           &&!isClosingBracket(scan.get(index+1))
               ){
              util.Utils.logError(
-            "Mathron Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
+            "ParserNG Does Not Allow "+getName()+" To Combine The Function Members \""+scan.get(index)+"\" And \""+scan.get(index+1)+"\""+
                         " As You Have Done."+
-            "Mathron Error Detector Post-number operators!" );
+            "ParserNG Error Detector Post-number operators!" );
              correct=false;
              scan.clear();
          }//end if

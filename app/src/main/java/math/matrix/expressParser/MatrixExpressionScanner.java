@@ -13,16 +13,20 @@
 package math.matrix.expressParser;
 
 
+import com.itis.libs.parserng.android.expressParser.Number;
+import com.itis.libs.parserng.android.expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.Variable;
+
 import expressParser.*;
 import java.util.*;
 import java.util.ArrayList;
  
 import math.matrix.MatrixVariableManager;
 import util.*;
-import static expressParser.STRING.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
-import static expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.STRING.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
 import static math.matrix.expressParser.MatrixVariable.*;
 /**
  *
@@ -98,7 +102,7 @@ private ArrayList<String> scanner=new ArrayList<String>();
            scannerInput.substring(i+1,i+2).equals("E")&&
            ( scannerInput.substring(i+2,i+3).equals("+") )
            &&isDigit( scannerInput.substring(i+3,i+4) ) ){
-        scannerInput=STRING.replace(scannerInput,"±", i+2, i+3);
+        scannerInput= STRING.replace(scannerInput,"±", i+2, i+3);
    }
    else if ( ( isDigit(scannerInput.substring(i,i+1))||scannerInput.substring(i,i+1).equals("."))&&
            scannerInput.substring(i+1,i+2).equals("E")&&
@@ -1117,8 +1121,8 @@ for(int i=0;i<scanner.size();i++){
  */
 for(int i=0;i<scanner.size();i++){
     try{
-    if(new expressParser.Number(scanner.get(i)).isNegative()&&scanner.get(i+1).equals("E")&&
-            new expressParser.Number(scanner.get(i+2)).isNumber()){
+    if(new Number(scanner.get(i)).isNegative()&&scanner.get(i+1).equals("E")&&
+            new Number(scanner.get(i+2)).isNumber()){
         scanner.set(i, scanner.get(i)+scanner.get(i+1)+scanner.get(i+2));
         scanner.remove(i+1);
         scanner.remove(i+1);
@@ -1198,8 +1202,8 @@ for(int i=0;i<scanner.size();i++){
  */
 for(int i=0;i<scanner.size();i++){
     try{
-    if(new expressParser.Number(scanner.get(i)).isNegative()&&scanner.get(i+1).equals("E")&&
-            new expressParser.Number(scanner.get(i+2)).isNumber()){
+    if(new Number(scanner.get(i)).isNegative()&&scanner.get(i+1).equals("E")&&
+            new Number(scanner.get(i+2)).isNumber()){
         scanner.set(i, scanner.get(i)+scanner.get(i+1)+scanner.get(i+2));
         scanner.remove(i+1);
         scanner.remove(i+1);
@@ -1236,7 +1240,7 @@ for(int i=0;i<scanner.size();i++){
         setRunnable(false);
     }
 
-    if(!isMatrixVariableName(scanner.get(i))&&!Variable.isVariableString(scanner.get(i))&&!MOperator.isOperatorString(scanner.get(i))&&!expressParser.Number.isNumber(scanner.get(i))){
+    if(!isMatrixVariableName(scanner.get(i))&&!Variable.isVariableString(scanner.get(i))&&!MOperator.isOperatorString(scanner.get(i))&&!Number.isNumber(scanner.get(i))){
         errorList.add("Syntax Error! Strange Object Found: "+scanner.get(i));
         setRunnable(false);
     }

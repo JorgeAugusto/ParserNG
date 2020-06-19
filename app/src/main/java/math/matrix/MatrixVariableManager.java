@@ -11,7 +11,7 @@ import util.Utils;
 
 import math.matrix.expressParser.MatrixValueParser;
 import math.matrix.expressParser.MatrixVariable;
-import expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.STRING;
 
 
 /**

@@ -13,14 +13,17 @@
 package math.matrix.expressParser;
 
 
+import com.itis.libs.parserng.android.expressParser.STRING;
+import com.itis.libs.parserng.android.expressParser.Variable;
+
 import expressParser.*;
 import java.util.*;
 import java.util.ArrayList;
 import util.*;
-import static expressParser.STRING.*;
-import static expressParser.Operator.*;
-import static expressParser.Variable.*;
-import static expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.STRING.*;
+import static com.itis.libs.parserng.android.expressParser.Operator.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
 /**
  *
  * @author GBEMIRO
@@ -95,7 +98,7 @@ private ArrayList<String> scanner=new ArrayList<String>();
            scannerInput.substring(i+1,i+2).equals("E")&&
            ( scannerInput.substring(i+2,i+3).equals("+") )
            &&isDigit( scannerInput.substring(i+3,i+4) ) ){
-        scannerInput=STRING.replace(scannerInput,"±", i+2, i+3);
+        scannerInput= STRING.replace(scannerInput,"±", i+2, i+3);
    }
    else if ( ( isDigit(scannerInput.substring(i,i+1))||scannerInput.substring(i,i+1).equals("."))&&
            scannerInput.substring(i+1,i+2).equals("E")&&

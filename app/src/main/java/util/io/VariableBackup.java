@@ -7,12 +7,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.concurrent.ConcurrentLinkedQueue;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 
-import expressParser.Variable;
+import com.itis.libs.parserng.android.expressParser.Variable;
 
 /**
  *

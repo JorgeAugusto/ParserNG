@@ -5,18 +5,20 @@
 
 package math.otherBaseParser;
 
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import com.itis.libs.parserng.android.expressParser.Number;
+
 import expressParser.*;
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
+import static com.itis.libs.parserng.android.expressParser.Number.*;
+import static com.itis.libs.parserng.android.expressParser.Variable.*;
 import java.util.ArrayList;
 import math.Maths;
-import static expressParser.methods.Method.*;
 
 /**
  *
  *@author JIBOYE Oluwagbemiro Olaoluwa
  */
-public class BaseNFunction extends MathExpression{
+public class BaseNFunction extends MathExpression {
 /**
  * The number base
  * that objects of this class
@@ -133,7 +135,7 @@ for(int i=0;i<numIndices.size();i++){
     public String solve(){
         if(isCorrectFunction()){
             String val = super.solve();
-            if(expressParser.Number.isNumber(val)){
+            if(Number.isNumber(val)){
                 return Maths.changeBase(val,"10", String.valueOf(baseOfOperation));
             }
             else{

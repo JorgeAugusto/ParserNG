@@ -3,13 +3,14 @@
  * and open the template in the editor.
  */
 package math.numericalmethods;
-import expressParser.Bracket;
-import expressParser.Variable;
+import com.itis.libs.parserng.android.expressParser.Number;
+import com.itis.libs.parserng.android.expressParser.Bracket;
+import com.itis.libs.parserng.android.expressParser.Variable;
 import util.FunctionManager;
-import expressParser.Function;
-import expressParser.LISTS;
-import expressParser.MathExpression;
-import expressParser.Operator;
+import com.itis.libs.parserng.android.expressParser.Function;
+import com.itis.libs.parserng.android.expressParser.LISTS;
+import com.itis.libs.parserng.android.expressParser.MathExpression;
+import com.itis.libs.parserng.android.expressParser.Operator;
 import java.util.InputMismatchException;
 import static java.lang.Math.*;
 import java.util.Arrays;
@@ -716,8 +717,8 @@ public class NumericalIntegral {
             args2 = list.get(4);
             args3 = list.get(5);
 
-            if(expressParser.Number.validNumber(args1) && expressParser.Number.validNumber(args2)){
-                if(!expressParser.Number.validNumber(args3) && !Operator.isClosingBracket(args3)){
+            if(Number.validNumber(args1) && Number.validNumber(args2)){
+                if(!Number.validNumber(args3) && !Operator.isClosingBracket(args3)){
                     list.clear();
                 }
             }

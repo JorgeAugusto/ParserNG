@@ -7,8 +7,6 @@ package math.matrix.expressParser;
 
 import expressParser.*;
 import java.util.ArrayList;
-import static expressParser.Number.*;
-import static expressParser.Variable.*;
 
 /**
  *
